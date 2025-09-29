@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dark Profile</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #e0e0e0;
+      scroll-behavior: smooth;
+    }
+    a { text-decoration: none; color: #1e90ff; }
+
+    /* Header/Profile Top Section */
+    .profile-header {
+      background: #1f1f1f;
+      color: #e0e0e0;
+      padding: 30px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .profile-info {
+      max-width: 600px;
+    }
+    .profile-info h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #ffffff;
+    }
+    .profile-info p {
+      margin: 5px 0;
+    }
+    .social-links a {
+      margin-right: 10px;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+    }
+    .social-links img {
+      width: 100%;
+      height: 100%;
+      filter: invert(100%);
+    }
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid #1e90ff;
+      object-fit: cover;
+    }
+
+    /* Container & Section */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #1e90ff;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    /* Education Cards */
+    .education-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .edu-card {
+      background: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .edu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(30,144,255,0.6);
+    }
+
+    /* Skills Section */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .skill {
+      flex: 1 1 200px;
+    }
+    .skill-name {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .skill-bar {
+      background: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+    }
+    .skill-level {
+      height: 100%;
+      background: #1e90ff;
+      width: 0;
+      border-radius: 10px;
+      transition: width 1s ease-in-out;
+    }
+
+    /* Projects Cards */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(30,144,255,0.6);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      height: 150px;
+      object-fit: cover;
+    }
+    .card .btn {
+      display: inline-block;
+      margin: 5px 5px 0 5px;
+      padding: 6px 12px;
+      background: #1e90ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+    .card .btn:hover {
+      background: #0d5bb5;
+    }
+
+    /* Footer */
+    footer {
+      background: #1f1f1f;
+      color: #e0e0e0;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .profile-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .profile-photo {
+        margin-top: 15px;
+      }
+      .education-list, .projects, .skills-list {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Profile Header -->
+  <div class="profile-header">
+    <div class="profile-info">
+      <h1>Nehar Kumar Roy</h1>
+      <p>Full Stack Web Developer | React, Node.js, SQL | Data cleaning</p>
+      <p>Email: <a href="nehargamers@gmail.com">nehargamers@gmail.com</a></p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/nehar kumar roy" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/neharkumarroy" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+        </a>
+        <a href="https://twitter.com/yourprofile" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter">
+        </a>
+      </div>
+    </div>
+    <a href="Nehar's Resume (2).pdf" class="btn" target="_blank" style="margin-top:10px;">Download Resume</a>
+
+    <img class="profile-photo" src="image.jpg" alt="Profile Photo">
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Education Section -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education-list">
+        <div class="edu-card">
+          <h3>Bachelor of Computer Applications</h3>
+          <p>MAKAUT techno India University</p>
+          <p>2022-2025</p>
+          <p>Siliguri Institute of Technology</p>
+          <p>CGPA: 6.8</p>
+        </div>
+        <div class="edu-card">
+          <h3>High School</h3>
+          <p>Milanpalli High School, 2018</p>
+          <p>Percentage: 48%</p>
+        </div>
+        <div class="edu-card">
+          <h3>B.A. in History</h3>
+          <p>NETAJI SUBHAS OPEN UNIVERSITY, 2020-2023</p>
+          <p>CGPA: 7.47</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill">
+          <div class="skill-name">HTML/CSS</div>
+          <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">React</div>
+          <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Google colab</div>
+          <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">SQL</div>
+          <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">python</div>
+          <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <img src="sellsdashbord.png" alt="Sales Dashboard">
+          <h3>Sales Dashboard</h3>
+          <p>Interactive dashboard for visualizing sales reports and data analytics.</p>
+          <a href="https://neharkumarroy.github.io/seles-dashbord/" class="btn" target="_blank">View Live</a>
+          <a href="https://github.com/neharkumarroy/seles-dashbord" class="btn" target="_blank">View Code</a>
+        </div>
+        <div class="card">
+          <img src="path-finder.png" alt="Pathfinder App">
+          <h3>Pathfinder (React + Node + SQLite)</h3>
+          <p>Pathfinding visualizer with Node backend and SQLite database integration.</p>
+          <a href="https://example.com/pathfinder" class="btn" target="_blank">View Live</a>
+          <a href="https://github.com/yourprofile/pathfinder" class="btn" target="_blank">View Code</a>
+        </div>
+        <div class="card">
+          <img src="crafty.png" alt="Crafty E-Commerce">
+          <h3>Crafty E-Commerce</h3>
+          <p>Frontend design of an e-commerce platform built with React.</p>
+          <a href="https://example.com/crafty-ecommerce" class="btn" target="_blank">View Live</a>
+          <a href="https://github.com/neharkumarroy/my-app" class="btn" target="_blank">View Code</a>
+        </div>
+        <div class="card">
+          <img src="g bot.png" alt="Grammar Correction Bot">
+          <h3>Grammar Correction Bot</h3>
+          <p>A chatbot that detects and corrects grammar mistakes using a custom JSON dictionary.</p>
+          <a href="https://neharkumarroy.github.io/GrammarBot/" class="btn" target="_blank">View Live</a>
+          <a href="https://github.com/neharkumarroy/GrammarBot" class="btn" target="_blank">View Code</a>
+        </div>
+        <div class="card">
+          <img src="recording.png" alt="audio_recording">
+          <h3>audio_recording</h3>
+          <p>A chatbot that detects and corrects grammar mistakes using a custom JSON dictionary.</p>
+          <a href="https://github.com/neharkumarroy/audio-recorder/" class="btn" target="_blank">View Live</a>
+          <a href="https://github.com/neharkumarroy/audio-recorder" class="btn" target="_blank">View Code</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>2025 Nehar Kumar Roy | IT Fresher</p>
+  </footer>
+
+  <script>
+    // Animate skill bars
+    window.addEventListener('DOMContentLoaded', () => {
+      const skillLevels = document.querySelectorAll('.skill-level');
+      skillLevels.forEach(el => {
+        const width = el.style.width;
+        el.style.width = '0';
+        setTimeout(() => {
+          el.style.width = width;
+        }, 100);
+      });
+    });
+  </script>
+</body>
+</html>
